@@ -1,0 +1,23 @@
+StockPicker/bin/
+StockPicker/obj/
+StockPicker/Properties/
+.vs/
+
+#Ignore config files
+*.config
+
+#Ignore suo files
+*.suo
+
+#Ignore csproj files
+*.csproj
+
+#Ignore solution files
+*.sln
+
+*.log
+*.json
+
+*.editorconfig
+*.cache
+*.txt
