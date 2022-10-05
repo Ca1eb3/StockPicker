@@ -1,6 +1,6 @@
 ﻿namespace StockPicker
 {
-    partial class Form1
+    partial class StockForm
     {
         /// <summary>
         ///  Required designer variable.

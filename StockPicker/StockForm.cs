@@ -1,8 +1,8 @@
 namespace StockPicker
 {
-    public partial class Form1 : Form
+    public partial class StockForm : Form
     {
-        public Form1()
+        public StockForm()
         {
             InitializeComponent();
         }
