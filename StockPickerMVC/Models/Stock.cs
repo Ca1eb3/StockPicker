@@ -7,7 +7,7 @@ namespace StockPickerMVC.Models
         // Class variables
         private string companyName = "na";
         private string ticker = "na";
-        private string marketCap = "na";
+        private string enterpriseValue = "na";
 
         // gets and sets
         public string CompanyName
@@ -20,10 +20,10 @@ namespace StockPickerMVC.Models
             get { return ticker; }
             set { ticker = value; }
         }
-        public string MarketCap
+        public string EnterpriseValue
         {
-            get { return marketCap; }
-            set { marketCap = value; }
+            get { return enterpriseValue; }
+            set { enterpriseValue = value; }
         }
 
         // Constructors
@@ -36,17 +36,17 @@ namespace StockPickerMVC.Models
             this.CompanyName = CompanyName;
             this.Ticker = Ticker;
         }
-        public Stock(string CompanyName, string Ticker, string MarketCap)
+        public Stock(string CompanyName, string Ticker, string EnterpriseValue)
         {
             this.CompanyName = CompanyName;
             this.Ticker = Ticker;
-            this.MarketCap = MarketCap;
+            this.EnterpriseValue = EnterpriseValue;
         }
 
         // methods
         public override string ToString()
         {
-            string message = $"Company Name: {CompanyName}  Ticker: {Ticker}  Market Cap: {MarketCap}";
+            string message = $"Company Name: {CompanyName}  Ticker: {Ticker}  Enterprise Value: {EnterpriseValue}";
             return message;
         }   
     }
