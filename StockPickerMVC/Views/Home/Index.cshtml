@@ -10,14 +10,14 @@
     <tr>
         <th>    Company Name  </th>
         <th>    Ticker  </th>
-        <th>    Market Cap  </th>
+        <th>    Enterprise Value  </th>
     </tr>
 @foreach (var s in ViewBag.Stocks)
 {
     <tr>
         <td> @s.CompanyName </td>
         <td> @s.Ticker </td>
-        <td> @s.MarketCap </td>
+            <td> @s.EnterpriseValue </td>
     </tr>
 }
 
