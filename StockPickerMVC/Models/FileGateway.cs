@@ -6,8 +6,6 @@ namespace StockPickerMVC.Models
     {
         public List<Stock> GetStocks(string path)
         {
-            // In this case path includes filename
-            // C:\\MyDocuments\data.csv
             List<Stock> stocks = new List<Stock>();
             string[] allRows;
             int index = 1;
@@ -19,7 +17,7 @@ namespace StockPickerMVC.Models
             while (index < allRows.Length)
             {
                 aRow = allRows[index].Split(',');
-                stock = new Stock(aRow[1], aRow[0], aRow[9]);
+                stock = new Stock(aRow[1], aRow[0], aRow[3]);
                 stocks.Add(stock);
                 index++;
             }

@@ -4,20 +4,24 @@
 @{
 }
 
-
-
 <table border="1">
     <tr>
-        <th>    Company Name  </th>
-        <th>    Ticker  </th>
-        <th>    Enterprise Value  </th>
+        <th>    Company Name </th>
+        <th>    Ticker </th>
+        <th>    Market Cap </th>
+        <th>    Cash and Equivalents </th>
+        <th>    Total Liabilities </th>
+        <th>    Enterprise Value </th>
     </tr>
 @foreach (var s in ViewBag.Stocks)
 {
     <tr>
         <td> @s.CompanyName </td>
         <td> @s.Ticker </td>
-            <td> @s.EnterpriseValue </td>
+        <td> @s.MarketCap </td>
+        <td> @s.Cash </td>
+        <td> @s.TotalLiabilities </td>
+        <td> @s.EnterpriseValue </td>
     </tr>
 }
 

@@ -7,7 +7,11 @@ namespace StockPickerMVC.Models
         // Class variables
         private string companyName = "na";
         private string ticker = "na";
-        private string enterpriseValue = "na";
+        private double enterpriseValue = double.NaN; 
+        private double marketCap = double.NaN; // billions
+        private double cash = double.NaN; // billions
+        private double totalLiabilities = double.NaN; // billions
+        private string exchange = "na";
 
         // gets and sets
         public string CompanyName
@@ -20,10 +24,30 @@ namespace StockPickerMVC.Models
             get { return ticker; }
             set { ticker = value; }
         }
-        public string EnterpriseValue
+        public double EnterpriseValue
         {
             get { return enterpriseValue; }
             set { enterpriseValue = value; }
+        }
+        public double MarketCap
+        {
+            get { return marketCap; }
+            set { marketCap = value; }
+        }
+        public double Cash
+        {
+            get { return cash; }
+            set { cash = value; }
+        }
+        public double TotalLiabilities
+        {
+            get { return totalLiabilities; }
+            set { totalLiabilities = value; }
+        }
+        public string Exchange
+        {
+            get { return exchange; }
+            set { exchange = value; }
         }
 
         // Constructors
@@ -36,18 +60,23 @@ namespace StockPickerMVC.Models
             this.CompanyName = CompanyName;
             this.Ticker = Ticker;
         }
-        public Stock(string CompanyName, string Ticker, string EnterpriseValue)
+        public Stock(string CompanyName, string Ticker, string Exchange)
         {
             this.CompanyName = CompanyName;
             this.Ticker = Ticker;
-            this.EnterpriseValue = EnterpriseValue;
+            this.Exchange = Exchange;
         }
 
         // methods
         public override string ToString()
         {
-            string message = $"Company Name: {CompanyName}  Ticker: {Ticker}  Enterprise Value: {EnterpriseValue}";
+            string message = $"Company Name: {CompanyName}  Ticker: {Ticker} Exchange: {Exchange} Enterprise Value: {EnterpriseValue} Market Cap: {MarketCap} Cash: {Cash} Total Liabilities: {TotalLiabilities}";
             return message;
         }   
+        public void CalculateEnterpriseValue()
+        {
+            // EV = MC + TL - C
+            this.EnterpriseValue = this.MarketCap + this.TotalLiabilities - this.Cash;
+        }
     }
 }

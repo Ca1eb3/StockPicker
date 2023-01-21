@@ -10,7 +10,6 @@ ADBE,Adobe Systems Inc,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/
 AAP,Advance Auto Parts,Consumer Discretionary,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AAP
 AMD,Advanced Micro Devices Inc,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AMD
 AES,AES Corp,Utilities,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AES
-AET,Aetna Inc,Health Care,London Stock Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AET
 AMG,Affiliated Managers Group Inc,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AMG
 AFL,AFLAC Inc,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AFL
 A,Agilent Technologies Inc,Health Care,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=A
@@ -18,11 +17,8 @@ APD,Air Products & Chemicals Inc,Materials,NYSE,http://www.sec.gov/cgi-bin/brows
 AKAM,Akamai Technologies Inc,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AKAM
 ALK,Alaska Air Group Inc,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ALK
 ALB,Albemarle Corp,Materials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ALB
-ARE,Alexandria Real Estate Equities Inc,Real Estate,London Stock Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ARE
 ALGN,Align Technology,Health Care,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ALGN
 ALLE,Allegion,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ALLE
-AGN,Allergan Plc,Health Care,Wiener Boerse,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AGN
-ADS,Alliance Data Systems,Information Technology,Deutsche Boerse AG,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ADS
 LNT,Alliant Energy Corp,Utilities,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LNT
 ALL,Allstate Corp,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ALL
 GOOGL,Alphabet Inc Class A,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=GOOGL
@@ -41,10 +37,8 @@ ABC,AmerisourceBergen Corp,Health Care,NYSE,http://www.sec.gov/cgi-bin/browse-ed
 AME,AMETEK Inc,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AME
 AMGN,Amgen Inc,Health Care,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AMGN
 APH,Amphenol Corp,Information Technology,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=APH
-APC,Anadarko Petroleum Corp,Energy,Deutsche Boerse AG,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=APC
 ADI,Analog Devices Inc.,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ADI
 ANSS,ANSYS,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANSS
-ANTM,Anthem Inc.,Health Care,Indonesia Stock Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ANTM
 AON,Aon plc,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AON
 APA,Apache Corporation,Energy,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=APA
 AIV,Apartment Investment & Management,Real Estate,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AIV
@@ -63,7 +57,6 @@ AVB,AvalonBay Communities Inc.,Real Estate,NYSE,http://www.sec.gov/cgi-bin/brows
 AVY,Avery Dennison Corp,Materials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AVY
 BAC,Bank of America Corp,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BAC
 BAX,Baxter International Inc.,Health Care,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BAX
-BBT,BB&T Corporation,Financials,Warsaw Stock Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BBT
 BDX,Becton Dickinson,Health Care,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BDX
 BRK.B,Berkshire Hathaway,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BRK.B
 BBY,Best Buy Co. Inc.,Consumer Discretionary,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BBY
@@ -79,8 +72,6 @@ BMY,Bristol-Myers Squibb,Health Care,NYSE,http://www.sec.gov/cgi-bin/browse-edga
 AVGO,Broadcom,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AVGO
 BF.B,Brown-Forman Corp.,Consumer Staples,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=BF.B
 CHRW,C. H. Robinson Worldwide,Industrials,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CHRW
-CA,CA Inc.,Information Technology,Euronext Paris,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CA
-COG,Cabot Oil & Gas,Energy,Warsaw Stock Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=COG
 CDNS,Cadence Design Systems,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CDNS
 CPB,Campbell Soup,Consumer Staples,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CPB
 COF,Capital One Financial,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=COF
@@ -88,11 +79,8 @@ CAH,Cardinal Health Inc.,Health Care,NYSE,http://www.sec.gov/cgi-bin/browse-edga
 KMX,Carmax Inc,Consumer Discretionary,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=KMX
 CCL,Carnival Corp.,Consumer Discretionary,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CCL
 CAT,Caterpillar Inc.,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CAT
-CBOE,CBOE Holdings,Financials,CBOE BZX Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CBOE
-CBG,CBRE Group,Real Estate,London Stock Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CBG
 CNC,Centene Corporation,Health Care,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CNC
 CNP,CenterPoint Energy,Utilities,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CNP
-CTL,CenturyLink Inc,Telecommunication Services,Deutsche Boerse AG,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTL
 CF,CF Industries Holdings Inc,Materials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CF
 SCHW,Charles Schwab Corporation,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=SCHW
 CHTR,Charter Communications,Consumer Discretionary,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CHTR
@@ -102,13 +90,11 @@ CMG,Chipotle Mexican Grill,Consumer Discretionary,NYSE,http://www.sec.gov/cgi-bi
 CB,Chubb Limited,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CB
 CHD,Church & Dwight,Consumer Staples,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CHD
 CI,CIGNA Corp.,Health Care,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CI
-XEC,Cimarex Energy,Energy,Toronto Stock Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=XEC
 CINF,Cincinnati Financial,Financials,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CINF
 CTAS,Cintas Corporation,Industrials,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTAS
 CSCO,Cisco Systems,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CSCO
 C,Citigroup Inc.,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=C
 CFG,Citizens Financial Group,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CFG
-CTXS,Citrix Systems,Information Technology,Mexican Stock Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CTXS
 CME,CME Group Inc.,Financials,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CME
 CMS,CMS Energy,Utilities,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CMS
 KO,Coca-Cola Company (The),Consumer Staples,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=KO
@@ -117,7 +103,6 @@ CL,Colgate-Palmolive,Consumer Staples,NYSE,http://www.sec.gov/cgi-bin/browse-edg
 CMCSA,Comcast Corp.,Consumer Discretionary,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CMCSA
 CMA,Comerica Inc.,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CMA
 CAG,Conagra Brands,Consumer Staples,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CAG
-CXO,Concho Resources,Energy,Australian Securities Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CXO
 COP,ConocoPhillips,Energy,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=COP
 ED,Consolidated Edison,Utilities,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ED
 STZ,Constellation Brands,Consumer Staples,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=STZ
@@ -125,8 +110,6 @@ GLW,Corning Inc.,Information Technology,NYSE,http://www.sec.gov/cgi-bin/browse-e
 COST,Costco Wholesale Corp.,Consumer Staples,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=COST
 COTY,Coty Inc,Consumer Staples,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=COTY
 CCI,Crown Castle International Corp.,Real Estate,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CCI
-CSRA,CSRA Inc.,Information Technology,Indonesia Stock Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CSRA
-CSX,CSX Corp.,Industrials,TSX Venture Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CSX
 CMI,Cummins Inc.,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CMI
 CVS,CVS Health,Consumer Staples,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CVS
 DHI,D. R. Horton,Consumer Discretionary,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DHI
@@ -146,7 +129,6 @@ D,Dominion Energy,Utilities,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=
 DOV,Dover Corp.,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DOV
 DTE,DTE Energy Co.,Utilities,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DTE
 DUK,Duke Energy,Utilities,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DUK
-DRE,Duke Realty Corp,Real Estate,Australian Securities Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DRE
 DXC,DXC Technology,Information Technology,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DXC
 EMN,Eastman Chemical,Materials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=EMN
 ETN,Eaton Corporation,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ETN
@@ -172,7 +154,7 @@ EXPD,Expeditors International,Industrials,NASDAQ,http://www.sec.gov/cgi-bin/brow
 EXR,Extra Space Storage,Real Estate,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=EXR
 XOM,Exxon Mobil Corp.,Energy,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=XOM
 FFIV,F5 Networks,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FFIV
-FB,Facebook Inc.,Information Technology,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FB
+FB,Facebook Inc.,Information Technology,SWX,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FB
 FAST,Fastenal Co,Industrials,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FAST
 FRT,Federal Realty Investment Trust,Real Estate,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FRT
 FDX,FedEx Corporation,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FDX
@@ -192,7 +174,6 @@ GRMN,Garmin Ltd.,Consumer Discretionary,NYSE,http://www.sec.gov/cgi-bin/browse-e
 IT,Gartner Inc,Information Technology,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IT
 GD,General Dynamics,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=GD
 GE,General Electric,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=GE
-GGP,General Growth Properties Inc.,Real Estate,London Stock Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=GGP
 GIS,General Mills,Consumer Staples,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=GIS
 GM,General Motors,Consumer Discretionary,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=GM
 GPC,Genuine Parts,Consumer Discretionary,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=GPC
@@ -223,7 +204,6 @@ HUM,Humana Inc.,Health Care,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=
 HBAN,Huntington Bancshares,Financials,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HBAN
 HII,Huntington Ingalls Industries,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=HII
 IDXX,IDEXX Laboratories,Health Care,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IDXX
-INFO,IHS Markit Ltd.,Industrials,OTC Markets,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=INFO
 ITW,Illinois Tool Works,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ITW
 ILMN,Illumina Inc,Health Care,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ILMN
 INCY,Incyte,Health Care,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=INCY
@@ -240,7 +220,6 @@ IVZ,Invesco Ltd.,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=
 IQV,IQVIA Holdings Inc.,Health Care,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IQV
 IRM,Iron Mountain Incorporated,Real Estate,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=IRM
 JBHT,J. B. Hunt Transport Services,Industrials,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JBHT
-JEC,Jacobs Engineering Group,Industrials,TSX Venture Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JEC
 SJM,JM Smucker,Consumer Staples,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=SJM
 JNJ,Johnson & Johnson,Health Care,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JNJ
 JCI,Johnson Controls International,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JCI
@@ -255,12 +234,9 @@ KLAC,KLA-Tencor Corp.,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/b
 KSS,Kohl's Corp.,Consumer Discretionary,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=KSS
 KHC,Kraft Heinz Co,Consumer Staples,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=KHC
 KR,Kroger Co.,Consumer Staples,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=KR
-LB,L Brands Inc.,Consumer Discretionary,Shenzhen Stock Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LB
-LLL,L-3 Communications Holdings,Industrials,Australian Securities Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LLL
 LRCX,Lam Research,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LRCX
 LEG,Leggett & Platt,Consumer Discretionary,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LEG
 LEN,Lennar Corp.,Consumer Discretionary,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LEN
-LUK,Leucadia National Corp.,Financials,Warsaw Stock Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LUK
 LLY,Lilly (Eli) & Co.,Health Care,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LLY
 LNC,Lincoln National,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LNC
 LKQ,LKQ Corporation,Consumer Discretionary,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LKQ
@@ -287,7 +263,6 @@ MRK,Merck & Co.,Health Care,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=
 MET,MetLife Inc.,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MET
 MTD,Mettler Toledo,Health Care,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MTD
 MGM,MGM Resorts International,Consumer Discretionary,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MGM
-KORS,Michael Kors Holdings,Consumer Discretionary,London Stock Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=KORS
 MCHP,Microchip Technology,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MCHP
 MU,Micron Technology,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MU
 MSFT,Microsoft Corp.,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MSFT
@@ -295,24 +270,20 @@ MAA,Mid-America Apartments,Real Estate,NYSE,http://www.sec.gov/cgi-bin/browse-ed
 MHK,Mohawk Industries,Consumer Discretionary,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MHK
 TAP,Molson Coors Brewing Company,Consumer Staples,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TAP
 MDLZ,Mondelez International,Consumer Staples,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MDLZ
-MON,Monsanto Co.,Materials,Warsaw Stock Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MON
 MNST,Monster Beverage,Consumer Staples,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MNST
 MCO,Moody's Corp,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MCO
 MS,Morgan Stanley,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MS
 MSI,Motorola Solutions Inc.,Information Technology,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MSI
-MYL,Mylan N.V.,Health Care,Australian Securities Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MYL
 NDAQ,Nasdaq Inc.,Financials,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NDAQ
 NOV,National Oilwell Varco Inc.,Energy,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NOV
 NAVI,Navient,Financials,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NAVI
 NTAP,NetApp,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NTAP
 NFLX,Netflix Inc.,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NFLX
 NWL,Newell Brands,Consumer Discretionary,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NWL
-NFX,Newfield Exploration Co,Energy,London Stock Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NFX
 NEM,Newmont Mining Corporation,Materials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NEM
 NWSA,News Corp. Class A,Consumer Discretionary,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NWSA
 NWS,News Corp. Class B,Consumer Discretionary,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NWS
 NEE,NextEra Energy,Utilities,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NEE
-NLSN,Nielsen Holdings,Industrials,Mexican Stock Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NLSN
 NKE,Nike,Consumer Discretionary,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NKE
 NI,NiSource Inc.,Utilities,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NI
 JWN,Nordstrom,Consumer Discretionary,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=JWN
@@ -365,7 +336,6 @@ DGX,Quest Diagnostics,Health Care,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?a
 RRC,Range Resources Corp.,Energy,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=RRC
 RJF,Raymond James Financial Inc.,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=RJF
 O,Realty Income Corporation,Real Estate,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=O
-RHT,Red Hat Inc.,Information Technology,TSX Venture Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=RHT
 REG,Regency Centers Corporation,Real Estate,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=REG
 REGN,Regeneron,Health Care,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=REGN
 RF,Regions Financial Corp.,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=RF
@@ -373,7 +343,6 @@ RSG,Republic Services Inc,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edg
 RMD,ResMed,Health Care,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=RMD
 RHI,Robert Half International,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=RHI
 ROK,Rockwell Automation Inc.,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ROK
-COL,Rockwell Collins,Industrials,Bolsas y Mercados Espanoles,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=COL
 ROP,Roper Technologies,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ROP
 ROST,Ross Stores,Consumer Discretionary,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ROST
 RCL,Royal Caribbean Cruises Ltd,Consumer Discretionary,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=RCL
@@ -381,9 +350,6 @@ SPGI,S&P Global Inc.,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?act
 CRM,Salesforce.com,Information Technology,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=CRM
 SBAC,SBA Communications,Real Estate,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=SBAC
 SLB,Schlumberger Ltd.,Energy,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=SLB
-SNI,Scripps Networks Interactive Inc.,Consumer Discretionary,Oslo Bors Asa,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=SNI
-STX,Seagate Technology,Information Technology,Australian Securities Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=STX
-SEE,Sealed Air,Materials,London Stock Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=SEE
 SRE,Sempra Energy,Utilities,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=SRE
 SHW,Sherwin-Williams,Materials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=SHW
 SPG,Simon Property Group Inc,Real Estate,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=SPG
@@ -415,10 +381,7 @@ MOS,The Mosaic Company,Materials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?ac
 TRV,The Travelers Companies Inc.,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TRV
 DIS,The Walt Disney Company,Consumer Discretionary,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DIS
 TMO,Thermo Fisher Scientific,Health Care,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TMO
-TIF,Tiffany & Co.,Consumer Discretionary,NEO Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TIF
 TJX,TJX Companies Inc.,Consumer Discretionary,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TJX
-TMK,Torchmark Corp.,Financials,Australian Securities Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TMK
-TSS,Total System Services,Information Technology,Deutsche Boerse AG,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TSS
 TSCO,Tractor Supply Company,Consumer Discretionary,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TSCO
 TDG,TransDigm Group,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TDG
 TRIP,TripAdvisor,Consumer Discretionary,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TRIP
@@ -435,12 +398,10 @@ UAL,United Continental Holdings,Industrials,NASDAQ,http://www.sec.gov/cgi-bin/br
 UNH,United Health Group Inc.,Health Care,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=UNH
 UPS,United Parcel Service,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=UPS
 URI,United Rentals Inc.,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=URI
-UTX,United Technologies,Industrials,SIX Swiss Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=UTX
 UHS,Universal Health Services Inc.,Health Care,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=UHS
 UNM,Unum Group,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=UNM
 VFC,V.F. Corp.,Consumer Discretionary,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=VFC
 VLO,Valero Energy,Energy,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=VLO
-VAR,Varian Medical Systems,Health Care,Deutsche Boerse AG,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=VAR
 VTR,Ventas Inc,Real Estate,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=VTR
 VRSN,Verisign Inc.,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=VRSN
 VRSK,Verisk Analytics,Industrials,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=VRSK
@@ -458,14 +419,10 @@ WFC,Wells Fargo,Financials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=g
 WDC,Western Digital,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WDC
 WU,Western Union Co,Information Technology,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WU
 WRK,WestRock Company,Materials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WRK
-WY,Weyerhaeuser Corp.,Real Estate,London Stock Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WY
-WHR,Whirlpool Corp.,Consumer Discretionary,London Stock Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WHR
 WMB,Williams Cos.,Energy,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WMB
-WYN,Wyndham Worldwide,Consumer Discretionary,London Stock Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WYN
 WYNN,Wynn Resorts Ltd,Consumer Discretionary,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=WYNN
 XEL,Xcel Energy Inc,Utilities,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=XEL
 XRX,Xerox Corp.,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=XRX
-XL,XL Capital,Financials,TSX Venture Exchange,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=XL
 XYL,Xylem Inc.,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=XYL
 YUM,Yum! Brands Inc,Consumer Discretionary,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=YUM
 ZBH,Zimmer Biomet Holdings,Health Care,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ZBH
