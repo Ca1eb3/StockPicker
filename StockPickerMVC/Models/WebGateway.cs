@@ -18,10 +18,19 @@ namespace StockPickerMVC.Models
         public static Stock GetStockData(Stock stock)
         {
             // Create web driver and navigate google finance
-            IWebDriver driver = new ChromeDriver("C:\\Users\\caleb\\Documents\\GitHub\\StockPicker");
+            ChromeOptions options = new ChromeOptions();
+            options.AddArgument("--headless");
+            IWebDriver driver = new ChromeDriver("C:\\Users\\caleb\\Documents\\GitHub\\StockPicker", options);
             driver.Navigate().GoToUrl($"https://www.google.com/finance/quote/{stock.Ticker}:{stock.Exchange}?hl=en");
 
+            
+
             // Find the button and click it
+            if (driver.FindElements(By.XPath("//*[@id=\"annual3\"]")).Count == 0)
+            {
+                driver.Quit();
+                return stock;
+            }
             IWebElement button = driver.FindElement(By.XPath("//*[@id=\"annual3\"]"));
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
             js.ExecuteScript("arguments[0].click();", button);

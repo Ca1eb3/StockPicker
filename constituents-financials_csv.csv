@@ -154,7 +154,8 @@ EXPD,Expeditors International,Industrials,NASDAQ,http://www.sec.gov/cgi-bin/brow
 EXR,Extra Space Storage,Real Estate,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=EXR
 XOM,Exxon Mobil Corp.,Energy,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=XOM
 FFIV,F5 Networks,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FFIV
-FB,Facebook Inc.,Information Technology,SWX,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FB
+META,Meta Platforms Inc.,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FB
+FB,Facebook Inc.,Information Technology,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FB
 FAST,Fastenal Co,Industrials,NASDAQ,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FAST
 FRT,Federal Realty Investment Trust,Real Estate,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FRT
 FDX,FedEx Corporation,Industrials,NYSE,http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FDX
