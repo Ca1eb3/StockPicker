@@ -12,7 +12,7 @@ namespace StockPickerMVC.Models
     public static class WebGateway
     {
         // class variables
-        private static HtmlWeb web = new HtmlWeb();
+        private static readonly HtmlWeb web = new HtmlWeb();
 
         // methods
         public static Stock GetStockData(Stock stock)
@@ -22,8 +22,6 @@ namespace StockPickerMVC.Models
             options.AddArgument("--headless");
             IWebDriver driver = new ChromeDriver("C:\\Users\\caleb\\Documents\\GitHub\\StockPicker", options);
             driver.Navigate().GoToUrl($"https://www.google.com/finance/quote/{stock.Ticker}:{stock.Exchange}?hl=en");
-
-            
 
             // Find the button and click it
             if (driver.FindElements(By.XPath("//*[@id=\"annual3\"]")).Count == 0)
@@ -77,12 +75,12 @@ namespace StockPickerMVC.Models
 
         private static Stock GetCash(Stock stock, HtmlDocument doc)
         {
-            // get node containing market cap
+            // get node containing cash
             var node = doc.DocumentNode.Descendants("td")
                 .Where(d => d.GetAttributeValue("class", "") == "QXDnM")
                 .ElementAtOrDefault(7);
 
-            // set market cap
+            // set cash
             if (node != null)
             {
                 string temp = node.InnerText;
@@ -104,12 +102,12 @@ namespace StockPickerMVC.Models
 
         private static Stock GetTotalLiabilities(Stock stock, HtmlDocument doc)
         {
-            // get node containing market cap
+            // get node containing total liabilities
             var node = doc.DocumentNode.Descendants("td")
                 .Where(d => d.GetAttributeValue("class", "") == "QXDnM")
                 .ElementAtOrDefault(9);
 
-            // set market cap
+            // set total liabilities
             if (node != null)
             {
                 string temp = node.InnerText;

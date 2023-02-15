@@ -17,12 +17,29 @@ namespace StockPickerMVC.Models
             while (index < allRows.Length)
             {
                 aRow = allRows[index].Split(',');
-                stock = new Stock(aRow[1], aRow[0], aRow[3]);
+                stock = new Stock(aRow[1], aRow[0], aRow[2], Convert.ToDouble(aRow[3]), Convert.ToDouble(aRow[4]), Convert.ToDouble(aRow[5]), Convert.ToDouble(aRow[6]));
                 stocks.Add(stock);
                 index++;
             }
 
             return stocks;
+        }
+
+        public void SetStockData(string path, List<Stock> stocks)
+        {
+            List<string> csvalltext = new List<string>();
+            string headerrow = "Symbol, Name, Exchange, Enterprise Value, Market Cap, Cash, Total Liabilities";
+            csvalltext.Add(headerrow);
+
+            foreach (Stock stock in stocks)
+            {
+                string csvtext = $"{stock.Ticker},{stock.CompanyName},{stock.Exchange},{stock.EnterpriseValue},{stock.MarketCap},{stock.Cash},{stock.TotalLiabilities}";
+                csvalltext.Add(csvtext);
+            }
+
+            FileStream update = File.Create(path);
+            update.Close();
+            File.AppendAllLines(path, csvalltext);
         }
     }
 }

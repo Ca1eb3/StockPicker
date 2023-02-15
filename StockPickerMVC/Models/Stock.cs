@@ -7,7 +7,7 @@ namespace StockPickerMVC.Models
         // Class variables
         private string companyName = "na";
         private string ticker = "na";
-        private double enterpriseValue = double.NaN; 
+        private double enterpriseValue = double.NaN; // billions
         private double marketCap = double.NaN; // billions
         private double cash = double.NaN; // billions
         private double totalLiabilities = double.NaN; // billions
@@ -65,6 +65,16 @@ namespace StockPickerMVC.Models
             this.CompanyName = CompanyName;
             this.Ticker = Ticker;
             this.Exchange = Exchange;
+        }
+        public Stock(string CompanyName, string Ticker, string Exchange, double EnterpriseValue, double MarketCap, double Cash, double TotalLiabilities)
+        {
+            this.CompanyName = CompanyName;
+            this.Ticker = Ticker;
+            this.Exchange = Exchange;
+            this.EnterpriseValue = EnterpriseValue;
+            this.MarketCap = MarketCap;
+            this.Cash = Cash;
+            this.TotalLiabilities = TotalLiabilities;
         }
 
         // methods

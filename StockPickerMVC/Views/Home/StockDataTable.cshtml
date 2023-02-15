@@ -1,0 +1,60 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<title> Stock Market Analysis </title>
+<style>
+    tr:nth-child(even) {
+        background-color: #D6EEEE;
+    }
+</style>
+<input type="button" id="ajax-button" name="Update Data" value="Update Data" onclick="sendAjaxRequest()" />
+<table border="1">
+    <tr>
+        <th>    Company Name </th>
+        <th>    Ticker </th>
+        <th>    Market Cap </th>
+        <th>    Cash and Equivalents </th>
+        <th>    Total Liabilities </th>
+        <th>    Enterprise Value </th>
+    </tr>
+    @foreach (var s in ViewBag.Stocks)
+    {
+        <tr>
+            <td> @s.CompanyName </td>
+            <td> @s.Ticker </td>
+            <td> @s.MarketCap </td>
+            <td> @s.Cash </td>
+            <td> @s.TotalLiabilities </td>
+            <td> @s.EnterpriseValue </td>
+        </tr>
+    }
+</table>
+
+<script> 
+    var requestInProgress = false;
+
+    function sendAjaxRequest() {
+        if (requestInProgress) {
+            return;
+        }
+        requestInProgress = true;
+        $.post("/Home/UpdateStockData", function () {
+            // Reload the page
+            location.href = '@Url.Action("StockDataTable", "Home")';
+            requestInProgress = false;
+
+            // Do something after the operation is completed
+            alert('Operation completed successfully.');
+        })
+            .fail(function () {
+                // Handle errors
+                alert('An error occurred.');
+                requestInProgress = false;
+            });
+    }
+</script>
