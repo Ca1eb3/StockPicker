@@ -41,6 +41,10 @@ namespace StockPickerMVC.Models
             stock = GetMarketCap(stock, doc);
             stock = GetCash(stock, doc);
             stock = GetTotalLiabilities(stock, doc);
+            stock = GetNetProfitMargin(stock, doc);
+            stock = GetNetIncome(stock, doc);
+            stock = GetRevenueGrowth(stock, doc);
+            stock = GetSharePrice(stock, doc);
 
             // close driver and return stock
             driver.Quit();
@@ -127,5 +131,112 @@ namespace StockPickerMVC.Models
             return stock;
         }
 
+        private static Stock GetNetProfitMargin(Stock stock, HtmlDocument doc)
+        {
+            // get node containing total liabilities
+            var node = doc.DocumentNode.Descendants("td")
+                .Where(d => d.GetAttributeValue("class", "") == "QXDnM")
+                .ElementAtOrDefault(3);
+
+            // set total liabilities
+            if (node != null)
+            {
+                string temp = node.InnerText;
+                string tempNew = "";
+                foreach (char c in temp)
+                {
+                    if (char.IsDigit(c) || c.Equals('.') || c.Equals('-'))
+                    {
+                        tempNew += c;
+                    }
+                }
+                if (double.TryParse(tempNew, out double result))
+                {
+                    stock.NetProfitMargin = result;
+                }
+            }
+            return stock;
+        }
+
+        private static Stock GetNetIncome(Stock stock, HtmlDocument doc)
+        {
+            // get node containing total liabilities
+            var node = doc.DocumentNode.Descendants("td")
+                .Where(d => d.GetAttributeValue("class", "") == "QXDnM")
+                .ElementAtOrDefault(2);
+
+            // set total liabilities
+            if (node != null)
+            {
+                string temp = node.InnerText;
+                string tempNew = "";
+                foreach (char c in temp)
+                {
+                    if (char.IsDigit(c) || c.Equals('.') || c.Equals('-'))
+                    {
+                        tempNew += c;
+                    }
+                }
+                if (double.TryParse(tempNew, out double result))
+                {
+                    stock.NetIncome = result;
+                }
+            }
+            return stock;
+        }
+
+        private static Stock GetRevenueGrowth(Stock stock, HtmlDocument doc)
+        {
+            // get node containing total liabilities
+            var node = doc.DocumentNode.Descendants("td")
+                .Where(d => d.GetAttributeValue("class", "") == "gEUVJe")
+                .ElementAtOrDefault(0);
+
+            // set total liabilities
+            if (node != null)
+            {
+                string temp = node.InnerText;
+                string tempNew = "";
+                foreach (char c in temp)
+                {
+                    if (char.IsDigit(c) || c.Equals('.') || c.Equals('-'))
+                    {
+                        tempNew += c;
+                    }
+                }
+                if (double.TryParse(tempNew, out double result))
+                {
+                    stock.RevenueGrowth = result;
+                }
+            }
+            return stock;
+        }
+
+        private static Stock GetSharePrice(Stock stock, HtmlDocument doc)
+        {
+            // get node containing total liabilities
+            var node = doc.DocumentNode.Descendants("div")
+                .Where(d => d.GetAttributeValue("class", "") == "P6K39c")
+                .ElementAtOrDefault(0);
+
+            // set total liabilities
+            if (node != null)
+            {
+                string temp = node.InnerText;
+                string tempNew = "";
+                foreach (char c in temp)
+                {
+                    if (char.IsDigit(c) || c.Equals('.') || c.Equals('-'))
+                    {
+                        tempNew += c;
+                    }
+                }
+                if (double.TryParse(tempNew, out double result))
+                {
+                    stock.SharePrice = result;
+                }
+            }
+            return stock;
+        }
     }
 }

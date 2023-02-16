@@ -21,6 +21,11 @@
         <th>    Cash and Equivalents </th>
         <th>    Total Liabilities </th>
         <th>    Enterprise Value </th>
+        <th>    Net Profit Margins </th>
+        <th>    Net Income </th>
+        <th>    Revenue Growth </th>
+        <th>    Return on EV </th>
+        <th>    Share Price </th>
     </tr>
     @foreach (var s in ViewBag.Stocks)
     {
@@ -31,6 +36,11 @@
             <td> @s.Cash </td>
             <td> @s.TotalLiabilities </td>
             <td> @s.EnterpriseValue </td>
+            <td> @s.NetProfitMargin </td>
+            <td> @s.NetIncome </td>
+            <td> @s.RevenueGrowth </td>
+            <td> @s.ReturnEV </td>
+            <td> @s.SharePrice </td>
         </tr>
     }
 </table>
