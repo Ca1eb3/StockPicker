@@ -3,6 +3,8 @@ using StockPickerMVC.Models;
 using System;
 using System.Diagnostics;
 using Newtonsoft.Json;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using StockData;
 
 namespace StockPickerMVC.Controllers
 {
@@ -15,17 +17,14 @@ namespace StockPickerMVC.Controllers
 
         public IActionResult StockDataTable()
         {
-            FileGateway gateway = new FileGateway();
-            List<Stock> stocks = gateway.GetStocks("C:\\Users\\caleb\\Documents\\GitHub\\StockPicker\\constituents-financials_csv.csv");
+            List<Stock> stocks = SqlDataLinkStocksCurrent.GetStocks();
             ViewBag.Stocks = stocks;
             return View();
         }
 
         public void UpdateStockData()
         {
-            FileGateway gateway = new FileGateway();
-            List<Stock> stocks = gateway.GetStocks("C:\\Users\\caleb\\Documents\\GitHub\\StockPicker\\constituents-financials_csv.csv");
-
+            List<Stock> stocks = SqlDataLinkStocksCurrent.GetStocks();
 
             for (int i = 0; i < stocks.Count; i++)
             {
@@ -33,7 +32,7 @@ namespace StockPickerMVC.Controllers
                 stocks[i].CalculateEnterpriseValue();
             }
 
-            gateway.SetStockData("C:\\Users\\caleb\\Documents\\GitHub\\StockPicker\\constituents-financials_csv.csv", stocks);
+            SqlDataLinkStocksCurrent.UpdateStocks(stocks);
         }
     }
 }

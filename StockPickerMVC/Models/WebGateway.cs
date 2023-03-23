@@ -61,6 +61,11 @@ namespace StockPickerMVC.Models
             if (node != null)
             {
                 string temp = node.InnerText;
+                bool isBillions = false;
+                if (temp.Contains('B'))
+                {
+                    isBillions = true;
+                }
                 string tempNew = "";
                 foreach (char c in temp)
                 {
@@ -71,7 +76,14 @@ namespace StockPickerMVC.Models
                 }
                 if (double.TryParse(tempNew, out double result))
                 {
-                    stock.MarketCap = result;
+                    if (isBillions == true)
+                    {
+                        stock.MarketCap = result * 1000;
+                    }
+                    else
+                    {
+                        stock.MarketCap = result;
+                    }
                 }
             }
             return stock;
@@ -88,6 +100,11 @@ namespace StockPickerMVC.Models
             if (node != null)
             {
                 string temp = node.InnerText;
+                bool isBillions = false;
+                if (temp.Contains('B'))
+                {
+                    isBillions = true;
+                }
                 string tempNew = "";
                 foreach (char c in temp)
                 {
@@ -98,7 +115,14 @@ namespace StockPickerMVC.Models
                 }
                 if (double.TryParse(tempNew, out double result))
                 {
-                    stock.Cash = result;
+                    if (isBillions == true)
+                    {
+                        stock.Cash = result * 1000;
+                    }
+                    else
+                    {
+                        stock.Cash = result;
+                    }
                 }
             }
             return stock;
@@ -115,6 +139,11 @@ namespace StockPickerMVC.Models
             if (node != null)
             {
                 string temp = node.InnerText;
+                bool isBillions = false;
+                if (temp.Contains('B'))
+                {
+                    isBillions = true;
+                }
                 string tempNew = "";
                 foreach (char c in temp)
                 {
@@ -125,7 +154,14 @@ namespace StockPickerMVC.Models
                 }
                 if (double.TryParse(tempNew, out double result))
                 {
-                    stock.TotalLiabilities = result;
+                    if (isBillions == true)
+                    {
+                        stock.TotalLiabilities = result * 1000;
+                    }
+                    else
+                    {
+                        stock.TotalLiabilities = result;
+                    }
                 }
             }
             return stock;
@@ -133,12 +169,12 @@ namespace StockPickerMVC.Models
 
         private static Stock GetNetProfitMargin(Stock stock, HtmlDocument doc)
         {
-            // get node containing total liabilities
+            // get node containing Net Profit Margin
             var node = doc.DocumentNode.Descendants("td")
                 .Where(d => d.GetAttributeValue("class", "") == "QXDnM")
                 .ElementAtOrDefault(3);
 
-            // set total liabilities
+            // set net profit margin
             if (node != null)
             {
                 string temp = node.InnerText;
@@ -160,15 +196,20 @@ namespace StockPickerMVC.Models
 
         private static Stock GetNetIncome(Stock stock, HtmlDocument doc)
         {
-            // get node containing total liabilities
+            // get node containing net income
             var node = doc.DocumentNode.Descendants("td")
                 .Where(d => d.GetAttributeValue("class", "") == "QXDnM")
                 .ElementAtOrDefault(2);
 
-            // set total liabilities
+            // set net income
             if (node != null)
             {
                 string temp = node.InnerText;
+                bool isBillions = false;
+                if (temp.Contains('B'))
+                {
+                    isBillions = true;
+                }
                 string tempNew = "";
                 foreach (char c in temp)
                 {
@@ -179,7 +220,14 @@ namespace StockPickerMVC.Models
                 }
                 if (double.TryParse(tempNew, out double result))
                 {
-                    stock.NetIncome = result;
+                    if (isBillions == true)
+                    {
+                        stock.NetIncome = result * 1000;
+                    }
+                    else
+                    {
+                        stock.NetIncome = result;
+                    }
                 }
             }
             return stock;
@@ -187,12 +235,12 @@ namespace StockPickerMVC.Models
 
         private static Stock GetRevenueGrowth(Stock stock, HtmlDocument doc)
         {
-            // get node containing total liabilities
+            // get node containing revenue growth
             var node = doc.DocumentNode.Descendants("td")
                 .Where(d => d.GetAttributeValue("class", "") == "gEUVJe")
                 .ElementAtOrDefault(0);
 
-            // set total liabilities
+            // set revenue growth
             if (node != null)
             {
                 string temp = node.InnerText;
@@ -214,12 +262,12 @@ namespace StockPickerMVC.Models
 
         private static Stock GetSharePrice(Stock stock, HtmlDocument doc)
         {
-            // get node containing total liabilities
+            // get node containing share price
             var node = doc.DocumentNode.Descendants("div")
                 .Where(d => d.GetAttributeValue("class", "") == "P6K39c")
                 .ElementAtOrDefault(0);
 
-            // set total liabilities
+            // set share price
             if (node != null)
             {
                 string temp = node.InnerText;
