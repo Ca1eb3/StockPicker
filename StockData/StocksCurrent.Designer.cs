@@ -1269,9 +1269,9 @@ SELECT Ticker, [Company Name], [Enterprise Value], [Market Cap], Cash, [Total Li
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=C:\\USERS\\CALEB\\DOCUMENTS\\COMPU" +
-                "TERSCIENCE\\STOCKDATA\\STOCKS.MDF;Integrated Security=True;Connect Timeout=30;Encr" +
-                "ypt=False;TrustServerCertificate=False";
+            this._connection.ConnectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=C:\\USERS\\CALEB\\DOCUMENTS\\GITHU" +
+                "B\\STOCKPICKER\\STOCKDATA\\STOCKS.MDF;Integrated Security=True;Connect Timeout=30;E" +
+                "ncrypt=False;TrustServerCertificate=False";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
