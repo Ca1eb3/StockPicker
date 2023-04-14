@@ -149,6 +149,6 @@ public class Stock
         this.EnterpriseValue = this.MarketCap + this.TotalLiabilities - this.Cash;
 
         // return on EV = Net Income / EV
-        this.ReturnEV = this.NetIncome / this.EnterpriseValue;
+        this.ReturnEV = (this.NetIncome / this.EnterpriseValue) * 100;
     }
 }

@@ -62,9 +62,14 @@ namespace StockPickerMVC.Models
             {
                 string temp = node.InnerText;
                 bool isBillions = false;
+                bool isTrillions = false;
                 if (temp.Contains('B'))
                 {
                     isBillions = true;
+                }
+                if (temp.Contains('T'))
+                {
+                    isTrillions = true;
                 }
                 string tempNew = "";
                 foreach (char c in temp)
@@ -79,6 +84,10 @@ namespace StockPickerMVC.Models
                     if (isBillions == true)
                     {
                         stock.MarketCap = result * 1000;
+                    }
+                    else if (isTrillions == true)
+                    {
+                        stock.MarketCap = result * 1000000;
                     }
                     else
                     {
@@ -101,9 +110,14 @@ namespace StockPickerMVC.Models
             {
                 string temp = node.InnerText;
                 bool isBillions = false;
+                bool isTrillions = false;
                 if (temp.Contains('B'))
                 {
                     isBillions = true;
+                }
+                if (temp.Contains('T'))
+                {
+                    isTrillions = true;
                 }
                 string tempNew = "";
                 foreach (char c in temp)
@@ -118,6 +132,10 @@ namespace StockPickerMVC.Models
                     if (isBillions == true)
                     {
                         stock.Cash = result * 1000;
+                    }
+                    else if (isTrillions == true)
+                    {
+                        stock.Cash = result * 1000000;
                     }
                     else
                     {
@@ -140,9 +158,14 @@ namespace StockPickerMVC.Models
             {
                 string temp = node.InnerText;
                 bool isBillions = false;
+                bool isTrillions = false;
                 if (temp.Contains('B'))
                 {
                     isBillions = true;
+                }
+                if (temp.Contains('T'))
+                {
+                    isTrillions = true;
                 }
                 string tempNew = "";
                 foreach (char c in temp)
@@ -157,6 +180,10 @@ namespace StockPickerMVC.Models
                     if (isBillions == true)
                     {
                         stock.TotalLiabilities = result * 1000;
+                    }
+                    else if (isTrillions == true)
+                    {
+                        stock.TotalLiabilities = result * 1000000;
                     }
                     else
                     {
@@ -206,9 +233,14 @@ namespace StockPickerMVC.Models
             {
                 string temp = node.InnerText;
                 bool isBillions = false;
+                bool isTrillions = false;
                 if (temp.Contains('B'))
                 {
                     isBillions = true;
+                }
+                if (temp.Contains('T'))
+                {
+                    isTrillions = true;
                 }
                 string tempNew = "";
                 foreach (char c in temp)
@@ -223,6 +255,10 @@ namespace StockPickerMVC.Models
                     if (isBillions == true)
                     {
                         stock.NetIncome = result * 1000;
+                    }
+                    else if (isTrillions == true)
+                    {
+                        stock.NetIncome = result * 1000000;
                     }
                     else
                     {
