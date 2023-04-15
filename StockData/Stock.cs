@@ -20,6 +20,7 @@ public class Stock
     private double revenueGrowth = double.NaN;
     private double returnEV = double.NaN;
     private double sharePrice = double.NaN;
+    private double shareGainsPrediction = double.NaN;
 
     // gets and sets
     [Column]
@@ -94,6 +95,12 @@ public class Stock
         get { return sharePrice; }
         set { sharePrice = value; }
     }
+    [Column]
+    public double ShareGainsPrediction
+    {
+        get { return shareGainsPrediction; }
+        set { shareGainsPrediction = value; }
+    }
 
     // Constructors
     public Stock()
@@ -135,6 +142,22 @@ public class Stock
         this.RevenueGrowth = RevenueGrowth;
         this.ReturnEV = ReturnEV;
         this.SharePrice = SharePrice;
+    }
+    public Stock(string Ticker, string CompanyName, double EnterpriseValue, double MarketCap, double Cash, double TotalLiabilities, string Exchange, double NetProfitMargin, double NetIncome, double RevenueGrowth, double ReturnEV, double SharePrice, double ShareGainsPrediction)
+    {
+        this.CompanyName = CompanyName;
+        this.Ticker = Ticker;
+        this.Exchange = Exchange;
+        this.EnterpriseValue = EnterpriseValue;
+        this.MarketCap = MarketCap;
+        this.Cash = Cash;
+        this.TotalLiabilities = TotalLiabilities;
+        this.NetProfitMargin = NetProfitMargin;
+        this.NetIncome = NetIncome;
+        this.RevenueGrowth = RevenueGrowth;
+        this.ReturnEV = ReturnEV;
+        this.SharePrice = SharePrice;
+        this.ShareGainsPrediction = ShareGainsPrediction;
     }
 
     // methods

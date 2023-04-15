@@ -303,6 +303,8 @@ namespace StockData {
             
             private global::System.Data.DataColumn columnShare_Price;
             
+            private global::System.Data.DataColumn columnPredicted_Gains;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public StocksCurrentDataTable() {
@@ -434,6 +436,14 @@ namespace StockData {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Predicted_GainsColumn {
+                get {
+                    return this.columnPredicted_Gains;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -469,7 +479,7 @@ namespace StockData {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public StocksCurrentRow AddStocksCurrentRow(string Ticker, string Company_Name, double Enterprise_Value, double Market_Cap, double Cash, double Total_Liabilities, string Exchange, double Net_Profit_Margin, double Net_Income, double Revenue_Growth, double Return_EV, double Share_Price) {
+            public StocksCurrentRow AddStocksCurrentRow(string Ticker, string Company_Name, double Enterprise_Value, double Market_Cap, double Cash, double Total_Liabilities, string Exchange, double Net_Profit_Margin, double Net_Income, double Revenue_Growth, double Return_EV, double Share_Price, double Predicted_Gains) {
                 StocksCurrentRow rowStocksCurrentRow = ((StocksCurrentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Ticker,
@@ -483,7 +493,8 @@ namespace StockData {
                         Net_Income,
                         Revenue_Growth,
                         Return_EV,
-                        Share_Price};
+                        Share_Price,
+                        Predicted_Gains};
                 rowStocksCurrentRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStocksCurrentRow);
                 return rowStocksCurrentRow;
@@ -525,6 +536,7 @@ namespace StockData {
                 this.columnRevenue_Growth = base.Columns["Revenue Growth"];
                 this.columnReturn_EV = base.Columns["Return EV"];
                 this.columnShare_Price = base.Columns["Share Price"];
+                this.columnPredicted_Gains = base.Columns["Predicted Gains"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -554,6 +566,8 @@ namespace StockData {
                 base.Columns.Add(this.columnReturn_EV);
                 this.columnShare_Price = new global::System.Data.DataColumn("Share Price", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnShare_Price);
+                this.columnPredicted_Gains = new global::System.Data.DataColumn("Predicted Gains", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPredicted_Gains);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnTicker}, true));
                 this.columnTicker.AllowDBNull = false;
@@ -884,6 +898,22 @@ namespace StockData {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double Predicted_Gains {
+                get {
+                    try {
+                        return ((double)(this[this.tableStocksCurrent.Predicted_GainsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Predicted Gains\' in table \'StocksCurrent\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStocksCurrent.Predicted_GainsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsEnterprise_ValueNull() {
                 return this.IsNull(this.tableStocksCurrent.Enterprise_ValueColumn);
             }
@@ -988,6 +1018,18 @@ namespace StockData {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetShare_PriceNull() {
                 this[this.tableStocksCurrent.Share_PriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPredicted_GainsNull() {
+                return this.IsNull(this.tableStocksCurrent.Predicted_GainsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPredicted_GainsNull() {
+                this[this.tableStocksCurrent.Predicted_GainsColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1162,10 +1204,11 @@ namespace StockData.StocksCurrentTableAdapters {
             tableMapping.ColumnMappings.Add("Revenue Growth", "Revenue Growth");
             tableMapping.ColumnMappings.Add("Return EV", "Return EV");
             tableMapping.ColumnMappings.Add("Share Price", "Share Price");
+            tableMapping.ColumnMappings.Add("Predicted Gains", "Predicted Gains");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[StocksCurrent] WHERE (([Ticker] = @Original_Ticker) AND ([Company Name] = @Original_Company_Name) AND ((@IsNull_Enterprise_Value = 1 AND [Enterprise Value] IS NULL) OR ([Enterprise Value] = @Original_Enterprise_Value)) AND ((@IsNull_Market_Cap = 1 AND [Market Cap] IS NULL) OR ([Market Cap] = @Original_Market_Cap)) AND ((@IsNull_Cash = 1 AND [Cash] IS NULL) OR ([Cash] = @Original_Cash)) AND ((@IsNull_Total_Liabilities = 1 AND [Total Liabilities] IS NULL) OR ([Total Liabilities] = @Original_Total_Liabilities)) AND ([Exchange] = @Original_Exchange) AND ((@IsNull_Net_Profit_Margin = 1 AND [Net Profit Margin] IS NULL) OR ([Net Profit Margin] = @Original_Net_Profit_Margin)) AND ((@IsNull_Net_Income = 1 AND [Net Income] IS NULL) OR ([Net Income] = @Original_Net_Income)) AND ((@IsNull_Revenue_Growth = 1 AND [Revenue Growth] IS NULL) OR ([Revenue Growth] = @Original_Revenue_Growth)) AND ((@IsNull_Return_EV = 1 AND [Return EV] IS NULL) OR ([Return EV] = @Original_Return_EV)) AND ((@IsNull_Share_Price = 1 AND [Share Price] IS NULL) OR ([Share Price] = @Original_Share_Price)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[StocksCurrent] WHERE (([Ticker] = @Original_Ticker) AND ([Company Name] = @Original_Company_Name) AND ((@IsNull_Enterprise_Value = 1 AND [Enterprise Value] IS NULL) OR ([Enterprise Value] = @Original_Enterprise_Value)) AND ((@IsNull_Market_Cap = 1 AND [Market Cap] IS NULL) OR ([Market Cap] = @Original_Market_Cap)) AND ((@IsNull_Cash = 1 AND [Cash] IS NULL) OR ([Cash] = @Original_Cash)) AND ((@IsNull_Total_Liabilities = 1 AND [Total Liabilities] IS NULL) OR ([Total Liabilities] = @Original_Total_Liabilities)) AND ([Exchange] = @Original_Exchange) AND ((@IsNull_Net_Profit_Margin = 1 AND [Net Profit Margin] IS NULL) OR ([Net Profit Margin] = @Original_Net_Profit_Margin)) AND ((@IsNull_Net_Income = 1 AND [Net Income] IS NULL) OR ([Net Income] = @Original_Net_Income)) AND ((@IsNull_Revenue_Growth = 1 AND [Revenue Growth] IS NULL) OR ([Revenue Growth] = @Original_Revenue_Growth)) AND ((@IsNull_Return_EV = 1 AND [Return EV] IS NULL) OR ([Return EV] = @Original_Return_EV)) AND ((@IsNull_Share_Price = 1 AND [Share Price] IS NULL) OR ([Share Price] = @Original_Share_Price)) AND ((@IsNull_Predicted_Gains = 1 AND [Predicted Gains] IS NULL) OR ([Predicted Gains] = @Original_Predicted_Gains)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ticker", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ticker", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Company_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Company Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -1188,10 +1231,12 @@ namespace StockData.StocksCurrentTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Return_EV", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Return EV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Share_Price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Share Price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Share_Price", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Share Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Predicted_Gains", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Predicted Gains", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Predicted_Gains", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Predicted Gains", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[StocksCurrent] ([Ticker], [Company Name], [Enterprise Value], [Market Cap], [Cash], [Total Liabilities], [Exchange], [Net Profit Margin], [Net Income], [Revenue Growth], [Return EV], [Share Price]) VALUES (@Ticker, @Company_Name, @Enterprise_Value, @Market_Cap, @Cash, @Total_Liabilities, @Exchange, @Net_Profit_Margin, @Net_Income, @Revenue_Growth, @Return_EV, @Share_Price);
-SELECT Ticker, [Company Name], [Enterprise Value], [Market Cap], Cash, [Total Liabilities], Exchange, [Net Profit Margin], [Net Income], [Revenue Growth], [Return EV], [Share Price] FROM StocksCurrent WHERE (Ticker = @Ticker)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[StocksCurrent] ([Ticker], [Company Name], [Enterprise Value], [Market Cap], [Cash], [Total Liabilities], [Exchange], [Net Profit Margin], [Net Income], [Revenue Growth], [Return EV], [Share Price], [Predicted Gains]) VALUES (@Ticker, @Company_Name, @Enterprise_Value, @Market_Cap, @Cash, @Total_Liabilities, @Exchange, @Net_Profit_Margin, @Net_Income, @Revenue_Growth, @Return_EV, @Share_Price, @Predicted_Gains);
+SELECT Ticker, [Company Name], [Enterprise Value], [Market Cap], Cash, [Total Liabilities], Exchange, [Net Profit Margin], [Net Income], [Revenue Growth], [Return EV], [Share Price], [Predicted Gains] FROM StocksCurrent WHERE (Ticker = @Ticker)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ticker", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ticker", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Company_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Company Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1205,30 +1250,33 @@ SELECT Ticker, [Company Name], [Enterprise Value], [Market Cap], Cash, [Total Li
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Revenue_Growth", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Revenue Growth", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Return_EV", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Return EV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Share_Price", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Share Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Predicted_Gains", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Predicted Gains", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[StocksCurrent] SET [Ticker] = @Ticker, [Company Name] = @Company_Na" +
                 "me, [Enterprise Value] = @Enterprise_Value, [Market Cap] = @Market_Cap, [Cash] =" +
                 " @Cash, [Total Liabilities] = @Total_Liabilities, [Exchange] = @Exchange, [Net P" +
                 "rofit Margin] = @Net_Profit_Margin, [Net Income] = @Net_Income, [Revenue Growth]" +
-                " = @Revenue_Growth, [Return EV] = @Return_EV, [Share Price] = @Share_Price WHERE" +
-                " (([Ticker] = @Original_Ticker) AND ([Company Name] = @Original_Company_Name) AN" +
-                "D ((@IsNull_Enterprise_Value = 1 AND [Enterprise Value] IS NULL) OR ([Enterprise" +
-                " Value] = @Original_Enterprise_Value)) AND ((@IsNull_Market_Cap = 1 AND [Market " +
-                "Cap] IS NULL) OR ([Market Cap] = @Original_Market_Cap)) AND ((@IsNull_Cash = 1 A" +
-                "ND [Cash] IS NULL) OR ([Cash] = @Original_Cash)) AND ((@IsNull_Total_Liabilities" +
-                " = 1 AND [Total Liabilities] IS NULL) OR ([Total Liabilities] = @Original_Total_" +
-                "Liabilities)) AND ([Exchange] = @Original_Exchange) AND ((@IsNull_Net_Profit_Mar" +
-                "gin = 1 AND [Net Profit Margin] IS NULL) OR ([Net Profit Margin] = @Original_Net" +
-                "_Profit_Margin)) AND ((@IsNull_Net_Income = 1 AND [Net Income] IS NULL) OR ([Net" +
-                " Income] = @Original_Net_Income)) AND ((@IsNull_Revenue_Growth = 1 AND [Revenue " +
-                "Growth] IS NULL) OR ([Revenue Growth] = @Original_Revenue_Growth)) AND ((@IsNull" +
-                "_Return_EV = 1 AND [Return EV] IS NULL) OR ([Return EV] = @Original_Return_EV)) " +
-                "AND ((@IsNull_Share_Price = 1 AND [Share Price] IS NULL) OR ([Share Price] = @Or" +
-                "iginal_Share_Price)));\r\nSELECT Ticker, [Company Name], [Enterprise Value], [Mark" +
-                "et Cap], Cash, [Total Liabilities], Exchange, [Net Profit Margin], [Net Income]," +
-                " [Revenue Growth], [Return EV], [Share Price] FROM StocksCurrent WHERE (Ticker =" +
-                " @Ticker)";
+                " = @Revenue_Growth, [Return EV] = @Return_EV, [Share Price] = @Share_Price, [Pre" +
+                "dicted Gains] = @Predicted_Gains WHERE (([Ticker] = @Original_Ticker) AND ([Comp" +
+                "any Name] = @Original_Company_Name) AND ((@IsNull_Enterprise_Value = 1 AND [Ente" +
+                "rprise Value] IS NULL) OR ([Enterprise Value] = @Original_Enterprise_Value)) AND" +
+                " ((@IsNull_Market_Cap = 1 AND [Market Cap] IS NULL) OR ([Market Cap] = @Original" +
+                "_Market_Cap)) AND ((@IsNull_Cash = 1 AND [Cash] IS NULL) OR ([Cash] = @Original_" +
+                "Cash)) AND ((@IsNull_Total_Liabilities = 1 AND [Total Liabilities] IS NULL) OR (" +
+                "[Total Liabilities] = @Original_Total_Liabilities)) AND ([Exchange] = @Original_" +
+                "Exchange) AND ((@IsNull_Net_Profit_Margin = 1 AND [Net Profit Margin] IS NULL) O" +
+                "R ([Net Profit Margin] = @Original_Net_Profit_Margin)) AND ((@IsNull_Net_Income " +
+                "= 1 AND [Net Income] IS NULL) OR ([Net Income] = @Original_Net_Income)) AND ((@I" +
+                "sNull_Revenue_Growth = 1 AND [Revenue Growth] IS NULL) OR ([Revenue Growth] = @O" +
+                "riginal_Revenue_Growth)) AND ((@IsNull_Return_EV = 1 AND [Return EV] IS NULL) OR" +
+                " ([Return EV] = @Original_Return_EV)) AND ((@IsNull_Share_Price = 1 AND [Share P" +
+                "rice] IS NULL) OR ([Share Price] = @Original_Share_Price)) AND ((@IsNull_Predict" +
+                "ed_Gains = 1 AND [Predicted Gains] IS NULL) OR ([Predicted Gains] = @Original_Pr" +
+                "edicted_Gains)));\r\nSELECT Ticker, [Company Name], [Enterprise Value], [Market Ca" +
+                "p], Cash, [Total Liabilities], Exchange, [Net Profit Margin], [Net Income], [Rev" +
+                "enue Growth], [Return EV], [Share Price], [Predicted Gains] FROM StocksCurrent W" +
+                "HERE (Ticker = @Ticker)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ticker", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ticker", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Company_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Company Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1242,6 +1290,7 @@ SELECT Ticker, [Company Name], [Enterprise Value], [Market Cap], Cash, [Total Li
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Revenue_Growth", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Revenue Growth", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Return_EV", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Return EV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Share_Price", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Share Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Predicted_Gains", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Predicted Gains", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ticker", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ticker", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Company_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Company Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Enterprise_Value", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Enterprise Value", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1263,6 +1312,8 @@ SELECT Ticker, [Company Name], [Enterprise Value], [Market Cap], Cash, [Total Li
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Return_EV", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Return EV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Share_Price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Share Price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Share_Price", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Share Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Predicted_Gains", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Predicted Gains", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Predicted_Gains", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Predicted Gains", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1282,7 +1333,7 @@ SELECT Ticker, [Company Name], [Enterprise Value], [Market Cap], Cash, [Total Li
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Ticker, [Company Name], [Enterprise Value], [Market Cap], Cash, [Total Lia" +
                 "bilities], Exchange, [Net Profit Margin], [Net Income], [Revenue Growth], [Retur" +
-                "n EV], [Share Price] FROM dbo.StocksCurrent";
+                "n EV], [Share Price], [Predicted Gains] FROM dbo.StocksCurrent";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1343,7 +1394,7 @@ SELECT Ticker, [Company Name], [Enterprise Value], [Market Cap], Cash, [Total Li
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_Ticker, string Original_Company_Name, global::System.Nullable<double> Original_Enterprise_Value, global::System.Nullable<double> Original_Market_Cap, global::System.Nullable<double> Original_Cash, global::System.Nullable<double> Original_Total_Liabilities, string Original_Exchange, global::System.Nullable<double> Original_Net_Profit_Margin, global::System.Nullable<double> Original_Net_Income, global::System.Nullable<double> Original_Revenue_Growth, global::System.Nullable<double> Original_Return_EV, global::System.Nullable<double> Original_Share_Price) {
+        public virtual int Delete(string Original_Ticker, string Original_Company_Name, global::System.Nullable<double> Original_Enterprise_Value, global::System.Nullable<double> Original_Market_Cap, global::System.Nullable<double> Original_Cash, global::System.Nullable<double> Original_Total_Liabilities, string Original_Exchange, global::System.Nullable<double> Original_Net_Profit_Margin, global::System.Nullable<double> Original_Net_Income, global::System.Nullable<double> Original_Revenue_Growth, global::System.Nullable<double> Original_Return_EV, global::System.Nullable<double> Original_Share_Price, global::System.Nullable<double> Original_Predicted_Gains) {
             if ((Original_Ticker == null)) {
                 throw new global::System.ArgumentNullException("Original_Ticker");
             }
@@ -1434,6 +1485,14 @@ SELECT Ticker, [Company Name], [Enterprise Value], [Market Cap], Cash, [Total Li
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
+            if ((Original_Predicted_Gains.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((double)(Original_Predicted_Gains.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1454,7 +1513,7 @@ SELECT Ticker, [Company Name], [Enterprise Value], [Market Cap], Cash, [Total Li
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Ticker, string Company_Name, global::System.Nullable<double> Enterprise_Value, global::System.Nullable<double> Market_Cap, global::System.Nullable<double> Cash, global::System.Nullable<double> Total_Liabilities, string Exchange, global::System.Nullable<double> Net_Profit_Margin, global::System.Nullable<double> Net_Income, global::System.Nullable<double> Revenue_Growth, global::System.Nullable<double> Return_EV, global::System.Nullable<double> Share_Price) {
+        public virtual int Insert(string Ticker, string Company_Name, global::System.Nullable<double> Enterprise_Value, global::System.Nullable<double> Market_Cap, global::System.Nullable<double> Cash, global::System.Nullable<double> Total_Liabilities, string Exchange, global::System.Nullable<double> Net_Profit_Margin, global::System.Nullable<double> Net_Income, global::System.Nullable<double> Revenue_Growth, global::System.Nullable<double> Return_EV, global::System.Nullable<double> Share_Price, global::System.Nullable<double> Predicted_Gains) {
             if ((Ticker == null)) {
                 throw new global::System.ArgumentNullException("Ticker");
             }
@@ -1527,6 +1586,12 @@ SELECT Ticker, [Company Name], [Enterprise Value], [Market Cap], Cash, [Total Li
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
+            if ((Predicted_Gains.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((double)(Predicted_Gains.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1560,6 +1625,7 @@ SELECT Ticker, [Company Name], [Enterprise Value], [Market Cap], Cash, [Total Li
                     global::System.Nullable<double> Revenue_Growth, 
                     global::System.Nullable<double> Return_EV, 
                     global::System.Nullable<double> Share_Price, 
+                    global::System.Nullable<double> Predicted_Gains, 
                     string Original_Ticker, 
                     string Original_Company_Name, 
                     global::System.Nullable<double> Original_Enterprise_Value, 
@@ -1571,7 +1637,8 @@ SELECT Ticker, [Company Name], [Enterprise Value], [Market Cap], Cash, [Total Li
                     global::System.Nullable<double> Original_Net_Income, 
                     global::System.Nullable<double> Original_Revenue_Growth, 
                     global::System.Nullable<double> Original_Return_EV, 
-                    global::System.Nullable<double> Original_Share_Price) {
+                    global::System.Nullable<double> Original_Share_Price, 
+                    global::System.Nullable<double> Original_Predicted_Gains) {
             if ((Ticker == null)) {
                 throw new global::System.ArgumentNullException("Ticker");
             }
@@ -1644,95 +1711,109 @@ SELECT Ticker, [Company Name], [Enterprise Value], [Market Cap], Cash, [Total Li
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
+            if ((Predicted_Gains.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((double)(Predicted_Gains.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
             if ((Original_Ticker == null)) {
                 throw new global::System.ArgumentNullException("Original_Ticker");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Ticker));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Ticker));
             }
             if ((Original_Company_Name == null)) {
                 throw new global::System.ArgumentNullException("Original_Company_Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Company_Name));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Company_Name));
             }
             if ((Original_Enterprise_Value.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((double)(Original_Enterprise_Value.Value));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((double)(Original_Enterprise_Value.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             if ((Original_Market_Cap.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((double)(Original_Market_Cap.Value));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((double)(Original_Market_Cap.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             if ((Original_Cash.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((double)(Original_Cash.Value));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((double)(Original_Cash.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             if ((Original_Total_Liabilities.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((double)(Original_Total_Liabilities.Value));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((double)(Original_Total_Liabilities.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             if ((Original_Exchange == null)) {
                 throw new global::System.ArgumentNullException("Original_Exchange");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_Exchange));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_Exchange));
             }
             if ((Original_Net_Profit_Margin.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((double)(Original_Net_Profit_Margin.Value));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((double)(Original_Net_Profit_Margin.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             if ((Original_Net_Income.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((double)(Original_Net_Income.Value));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((double)(Original_Net_Income.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             if ((Original_Revenue_Growth.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((double)(Original_Revenue_Growth.Value));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((double)(Original_Revenue_Growth.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
             if ((Original_Return_EV.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((double)(Original_Return_EV.Value));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((double)(Original_Return_EV.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
             if ((Original_Share_Price.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((double)(Original_Share_Price.Value));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((double)(Original_Share_Price.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Predicted_Gains.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((double)(Original_Predicted_Gains.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1766,6 +1847,7 @@ SELECT Ticker, [Company Name], [Enterprise Value], [Market Cap], Cash, [Total Li
                     global::System.Nullable<double> Revenue_Growth, 
                     global::System.Nullable<double> Return_EV, 
                     global::System.Nullable<double> Share_Price, 
+                    global::System.Nullable<double> Predicted_Gains, 
                     string Original_Ticker, 
                     string Original_Company_Name, 
                     global::System.Nullable<double> Original_Enterprise_Value, 
@@ -1777,8 +1859,9 @@ SELECT Ticker, [Company Name], [Enterprise Value], [Market Cap], Cash, [Total Li
                     global::System.Nullable<double> Original_Net_Income, 
                     global::System.Nullable<double> Original_Revenue_Growth, 
                     global::System.Nullable<double> Original_Return_EV, 
-                    global::System.Nullable<double> Original_Share_Price) {
-            return this.Update(Original_Ticker, Company_Name, Enterprise_Value, Market_Cap, Cash, Total_Liabilities, Exchange, Net_Profit_Margin, Net_Income, Revenue_Growth, Return_EV, Share_Price, Original_Ticker, Original_Company_Name, Original_Enterprise_Value, Original_Market_Cap, Original_Cash, Original_Total_Liabilities, Original_Exchange, Original_Net_Profit_Margin, Original_Net_Income, Original_Revenue_Growth, Original_Return_EV, Original_Share_Price);
+                    global::System.Nullable<double> Original_Share_Price, 
+                    global::System.Nullable<double> Original_Predicted_Gains) {
+            return this.Update(Original_Ticker, Company_Name, Enterprise_Value, Market_Cap, Cash, Total_Liabilities, Exchange, Net_Profit_Margin, Net_Income, Revenue_Growth, Return_EV, Share_Price, Predicted_Gains, Original_Ticker, Original_Company_Name, Original_Enterprise_Value, Original_Market_Cap, Original_Cash, Original_Total_Liabilities, Original_Exchange, Original_Net_Profit_Margin, Original_Net_Income, Original_Revenue_Growth, Original_Return_EV, Original_Share_Price, Original_Predicted_Gains);
         }
     }
     

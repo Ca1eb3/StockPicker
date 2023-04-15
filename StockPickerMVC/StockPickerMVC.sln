@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockPickerMVC", "StockPick
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockData", "..\StockData\StockData.csproj", "{05183BF8-F227-4B5C-AED2-5DA158E341AF}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "SAGE", "..\SAGE\SAGE.pyproj", "{2CCE014C-633A-4CF0-92F5-3C14C748A9A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{05183BF8-F227-4B5C-AED2-5DA158E341AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05183BF8-F227-4B5C-AED2-5DA158E341AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05183BF8-F227-4B5C-AED2-5DA158E341AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CCE014C-633A-4CF0-92F5-3C14C748A9A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CCE014C-633A-4CF0-92F5-3C14C748A9A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

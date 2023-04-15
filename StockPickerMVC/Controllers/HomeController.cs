@@ -34,5 +34,31 @@ namespace StockPickerMVC.Controllers
 
             SqlDataLinkStocksCurrent.UpdateStocks(stocks);
         }
+
+        public void UpdatePredictions()
+        {
+            var process = new Process();
+
+            // Set the filename and arguments for the Python script
+            process.StartInfo.FileName = "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Python39_64\\python.exe";
+            process.StartInfo.Arguments = "C:\\Users\\caleb\\Documents\\GitHub\\StockPicker\\SAGE\\SAGEPrediction.py";
+
+            process.StartInfo.UseShellExecute = false;
+
+            // Redirect the standard output and error streams
+            process.StartInfo.RedirectStandardError = true;
+
+            // Start the process
+            process.Start();
+
+            // Read the standard output and error streams
+            string error = process.StandardError.ReadToEnd();
+
+            // Wait for the process to exit
+            process.WaitForExit();
+
+            Console.WriteLine(error);
+
+        }
     }
 }

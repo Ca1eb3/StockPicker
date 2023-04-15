@@ -28,7 +28,7 @@ namespace StockData
             {
                 if (!(row.ItemArray.Contains(DBNull.Value)))
                 {
-                    Stock stock = new Stock(Convert.ToString(row.ItemArray[0]), Convert.ToString(row.ItemArray[1]), Convert.ToDouble(row.ItemArray[2]), Convert.ToDouble(row.ItemArray[3]), Convert.ToDouble(row.ItemArray[4]), Convert.ToDouble(row.ItemArray[5]), Convert.ToString(row.ItemArray[6]), Convert.ToDouble(row.ItemArray[7]), Convert.ToDouble(row.ItemArray[8]), Convert.ToDouble(row.ItemArray[9]), Convert.ToDouble(row.ItemArray[10]), Convert.ToDouble(row.ItemArray[11]));
+                    Stock stock = new Stock(Convert.ToString(row.ItemArray[0]), Convert.ToString(row.ItemArray[1]), Convert.ToDouble(row.ItemArray[2]), Convert.ToDouble(row.ItemArray[3]), Convert.ToDouble(row.ItemArray[4]), Convert.ToDouble(row.ItemArray[5]), Convert.ToString(row.ItemArray[6]), Convert.ToDouble(row.ItemArray[7]), Convert.ToDouble(row.ItemArray[8]), Convert.ToDouble(row.ItemArray[9]), Convert.ToDouble(row.ItemArray[10]), Convert.ToDouble(row.ItemArray[11]), Convert.ToDouble(row.ItemArray[12]));
                     stocks.Add(stock);
                 }
             }

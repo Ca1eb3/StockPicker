@@ -13,6 +13,7 @@
     }
 </style>
 <input type="button" id="ajax-button" name="Update Data" value="Update Data" onclick="sendAjaxRequest()" />
+<input type="button" id="ajax-button" name="Update Predictions" value="Update Predictions" onclick="sendAjaxRequestPrediction()" />
 <table border="1">
     <tr>
         <th>    Company Name </th>
@@ -26,6 +27,7 @@
         <th>    Revenue Growth </th>
         <th>    Return on EV </th>
         <th>    Share Price </th>
+        <th>    Predicted Gains/Loss </th>
     </tr>
     @foreach (var s in ViewBag.Stocks)
     {
@@ -41,6 +43,7 @@
             <td> @s.RevenueGrowth </td>
             <td> @s.ReturnEV </td>
             <td> @s.SharePrice </td>
+            <td> @s.ShareGainsPrediction </td>
         </tr>
     }
 </table>
@@ -66,5 +69,25 @@
                 alert('An error occurred.');
                 requestInProgress = false;
             });
+    }
+
+    function sendAjaxRequestPrediction() {
+    if (requestInProgress) {
+        return;
+    }
+    requestInProgress = true;
+    $.post("/Home/UpdatePredictions", function () {
+        // Reload the page
+        location.href = '@Url.Action("StockDataTable", "Home")';
+        requestInProgress = false;
+
+        // Do something after the operation is completed
+        alert('Operation completed successfully.');
+    })
+        .fail(function () {
+            // Handle errors
+            alert('An error occurred.');
+            requestInProgress = false;
+        });
     }
 </script>
